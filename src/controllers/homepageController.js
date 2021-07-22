@@ -1,3 +1,4 @@
+"use strict";
 require("dotenv").config();
 import request from "request";
 import homepageService from "../services/homepageService";
@@ -242,6 +243,7 @@ let handleSetupInfor = async (req, res) => {
 
 let handleGetSurveyPage = (req, res) => {
     const facebookAppId = process.env.FACEBOOK_APP_ID;
+    console.log
     return res.render('survey.ejs', {
         facebookAppId: facebookAppId
     });
