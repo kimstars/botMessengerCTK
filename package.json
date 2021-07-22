@@ -1,0 +1,37 @@
+{
+  "name": "fb-messenger-bot-collects-data-googlesheets",
+  "version": "1.0.0",
+  "description": "bot messenger",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec ./node_modules/.bin/babel-node ./src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimstars/botMessengerCTK.git"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "ctk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimstars/botMessengerCTK.git/issues"
+  },
+  "homepage": "https://github.com/kimstars/botMessengerCTK.git#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "google-spreadsheet": "^3.1.15",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "nodemon": "^2.0.7"
+  }
+}
