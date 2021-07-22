@@ -177,6 +177,13 @@ let handleSetupInfor = async (req, res) => {
         "get_started": {
             "payload": "GET_STARTED"
         },
+        "greeting": [
+            {
+                "locale": "default",
+                "text": "Hello bro {{user_first_name}}! Bạn vẫn khỏe chứ ? :)"
+            }
+        ],
+
         "persistent_menu": [
             {
                 "locale": "default",
@@ -191,7 +198,7 @@ let handleSetupInfor = async (req, res) => {
                     {
                         "type": "web_url",
                         "title": "Source code this chatbot",
-                        "url": "https://www.github.com/haryphamdev",
+                        "url": "https://www.github.com/kimstars",
                         "webview_height_ratio": "full"
                     },
                     {
