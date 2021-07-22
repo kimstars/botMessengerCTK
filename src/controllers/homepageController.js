@@ -139,7 +139,7 @@ let handlePostback = (sender_psid, received_postback) => {
         console.log("this is bat dau -------------------------------------------------");
         console.log(response);
     } else if (payload === 'RESTART_CONVERSATION') {
-        response = homepageService.handleGetStartedButton();
+        response = homepageService.ctkHandlenbot();
     }
     // Send the message to acknowledge the postback
     callSendAPI(sender_psid, response);

@@ -40,6 +40,41 @@ let handleGetStartedButton = () => {
 
 }
 
+let ctkHandlenbot = () => {
+    let response = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [
+                    {
+                        "title": "chu tuan kiet dep trai that",
+                        "image_url": "https://bit.ly/eric-bot1",
+                        "subtitle": "(saving data to google sheet)",
+                        "default_action": {
+                            "type": "web_url",
+                            "url": `${process.env.URL_WEB_VIEW_SURVEY}`,
+                            "webview_height_ratio": "tall",
+                        },
+                        "buttons": [
+                            {
+                                "type": "web_url",
+                                "url": `${process.env.URL_WEB_VIEW_SURVEY}`,
+                                "webview_height_ratio": "tall",
+                                "title": "Start survey",
+                                "messenger_extensions": true //false: open the webview in new tab
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    };
+    return response;
+
+}
+
+
 let getButtonMessageTemplate = () => {
     let response = {
         "attachment": {
@@ -70,5 +105,6 @@ let getButtonMessageTemplate = () => {
 }
 module.exports = {
     handleGetStartedButton: handleGetStartedButton,
-    getButtonMessageTemplate: getButtonMessageTemplate
+    getButtonMessageTemplate: getButtonMessageTemplate,
+    ctkHandlenbot: ctkHandlenbot
 };
