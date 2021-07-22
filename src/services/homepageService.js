@@ -53,13 +53,13 @@ let ctkHandlenbot = () => {
                         "subtitle": "(saving data to google sheet)",
                         "default_action": {
                             "type": "web_url",
-                            "url": `${process.env.URL_WEB_VIEW_SURVEY}`,
+                            "url": "https://mess-bot-kiet.herokuapp.com/get-survey",
                             "webview_height_ratio": "tall",
                         },
                         "buttons": [
                             {
                                 "type": "web_url",
-                                "url": `${process.env.URL_WEB_VIEW_SURVEY}`,
+                                "url": "https://mess-bot-kiet.herokuapp.com/get-survey",
                                 "webview_height_ratio": "tall",
                                 "title": "Start survey",
                                 "messenger_extensions": true //false: open the webview in new tab
