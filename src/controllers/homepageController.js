@@ -135,12 +135,10 @@ let handlePostback = (sender_psid, received_postback) => {
     } else if (payload === 'no') {
         response = { "text": "Oops, try sending another image." }
     } else if (payload === 'GET_STARTED') {
-        response = {"text" : "hello"}
-        // response = homepageService.handleGetStartedButton();
-        console.log("this is bat dau -------------------------------------------------");
-        console.log(response);
+        response = homepageService.handleGetStartedButton();
+        // console.log(response);
     } else if (payload === 'RESTART_CONVERSATION') {
-        response = homepageService.ctkHandlenbot();
+        response = homepageService.ctkHandlebot();
     }
     // Send the message to acknowledge the postback
     callSendAPI(sender_psid, response);
@@ -185,10 +183,9 @@ let handleSetupInfor = async (req, res) => {
         "greeting": [
             {
                 "locale": "default",
-                "text": "Hello bro {{user_first_name}}! Bạn vẫn khỏe chứ ? :)"
+                "text": "Hello bro {{user_first_name}}! Mày vẫn khỏe chứ ? :)"
             }
         ],
-
         "persistent_menu": [
             {
                 "locale": "default",
@@ -196,13 +193,18 @@ let handleSetupInfor = async (req, res) => {
                 "call_to_actions": [
                     {
                         "type": "web_url",
-                        "title": "My youtube channel",
-                        "url": "https://www.youtube.com/channel/UCHqJxLo7mKam9GKqqwr2wfA",
+                        "title": "Bắt đầu chơi nào tó",
+                        "payload" : "GET_STARTED"
+                    },
+                    {
+                        "type": "web_url",
+                        "title": "Xem cái cục bọn m vừa gửi nè",
+                        "url": "https://docs.google.com/spreadsheets/d/1fGaZXSGZ381tLvAzechjFBR9sDSc7pP9-6p_uwrcCOw/edit?usp=sharing",
                         "webview_height_ratio": "full"
                     },
                     {
                         "type": "web_url",
-                        "title": "Source code this chatbot",
+                        "title": "Link git của tao",
                         "url": "https://www.github.com/kimstars",
                         "webview_height_ratio": "full"
                     },

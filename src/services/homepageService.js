@@ -24,12 +24,7 @@ let handleGetStartedButton = () => {
                                 "webview_height_ratio": "tall",
                                 "title": "Start survey",
                                 "messenger_extensions": true //false: open the webview in new tab
-                            },
-                            {
-                                "type": "web_url",
-                                "url": "https://www.messenger.com/",
-                                "title": "Watch more!"
-                            },
+                            }
                         ]
                     }
                 ]
@@ -40,7 +35,7 @@ let handleGetStartedButton = () => {
 
 }
 
-let ctkHandlenbot = () => {
+let ctkHandlebot = () => {
     let response = {
         "attachment": {
             "type": "template",
@@ -106,5 +101,5 @@ let getButtonMessageTemplate = () => {
 module.exports = {
     handleGetStartedButton: handleGetStartedButton,
     getButtonMessageTemplate: getButtonMessageTemplate,
-    ctkHandlenbot: ctkHandlenbot
+    ctkHandlebot: ctkHandlebot
 };
