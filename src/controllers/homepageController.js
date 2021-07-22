@@ -135,6 +135,8 @@ let handlePostback = (sender_psid, received_postback) => {
         response = { "text": "Oops, try sending another image." }
     } else if (payload === 'GET_STARTED') {
         response = homepageService.handleGetStartedButton();
+        console.log("this is bat dau -------------------------------------------------");
+        console.log(response);
     } else if (payload === 'RESTART_CONVERSATION') {
         response = homepageService.handleGetStartedButton();
     }
