@@ -135,8 +135,6 @@ let handlePostback = (sender_psid, received_postback) => {
         response = { "text": "Oops, try sending another image." }
     } else if (payload === 'GET_STARTED') {
         response = homepageService.handleGetStartedButton();
-        console.log("this is bat dau -------------------------------------------------");
-        console.log(response);
     } else if (payload === 'RESTART_CONVERSATION') {
         response = homepageService.handleGetStartedButton();
     }
@@ -163,6 +161,7 @@ let callSendAPI = (sender_psid, response) => {
     }, (err, res, body) => {
         if (!err) {
             console.log('message sent!')
+            console.log("pageaccess token "+ PAGE_ACCESS_TOKEN);
         } else {
             console.error("Unable to send message:" + err);
             console.log('check error send messages 1111111111111')
