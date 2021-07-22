@@ -9,12 +9,12 @@ let handleGetStartedButton = () => {
                 "template_type": "generic",
                 "elements": [
                     {
-                        "title": "Welcome to the HaryPhamDev new Chatbot!",
+                        "title": "Welcome to the CTK new Chatbot!",
                         "image_url": `${process.env.IMAGE_GET_STARTED_BUTTON_URL}`,
                         "subtitle": "(saving data to google sheet)",
                         "default_action": {
                             "type": "web_url",
-                            "url": "https://www.youtube.com/channel/UCHqJxLo7mKam9GKqqwr2wfA",
+                            "url": "",
                             "webview_height_ratio": "tall",
                         },
                         "buttons": [
@@ -27,7 +27,7 @@ let handleGetStartedButton = () => {
                             },
                             {
                                 "type": "web_url",
-                                "url": "https://www.youtube.com/channel/UCHqJxLo7mKam9GKqqwr2wfA",
+                                "url": "",
                                 "title": "Watch more!"
                             },
                         ]
