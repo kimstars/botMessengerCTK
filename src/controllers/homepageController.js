@@ -157,17 +157,18 @@ let callSendAPI = (sender_psid, response) => {
     // Send the HTTP request to the Messenger Platform
     request({
         "uri": "https://graph.facebook.com/v6.0/me/messages",
-        "qs": { "access_token": PAGE_ACCESS_TOKEN },
+        "qs": { "access_token": PAGE_ACCESS_TOKEN},
         "method": "POST",
         "json": request_body
     }, (err, res, body) => {
+        console.log('check error send messages 1111111111111')
+        console.log(res)
+        console.log('check error send messages 22222222222')
         if (!err) {
             console.log('message sent!')
         } else {
             console.error("Unable to send message:" + err);
-            console.log('check error send messages 1111111111111')
-            console.log(res)
-            console.log('check error send messages 22222222222')
+        
         }
     });
 };
