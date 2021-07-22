@@ -10,7 +10,7 @@ let handleGetStartedButton = () => {
                 "elements": [
                     {
                         "title": "Welcome to the CTK new Chatbot!",
-                        "image_url": `${process.env.IMAGE_GET_STARTED_BUTTON_URL}`,
+                        "image_url": "https://petersfancybrownhats.com/company_image.png",
                         "subtitle": "(saving data to google sheet)",
                         "default_action": {
                             "type": "web_url",
