@@ -27,7 +27,7 @@ let handleGetStartedButton = () => {
                             },
                             {
                                 "type": "web_url",
-                                "url": "",
+                                "url": "https://www.messenger.com/",
                                 "title": "Watch more!"
                             },
                         ]
