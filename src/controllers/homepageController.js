@@ -134,7 +134,8 @@ let handlePostback = (sender_psid, received_postback) => {
     } else if (payload === 'no') {
         response = { "text": "Oops, try sending another image." }
     } else if (payload === 'GET_STARTED') {
-        response = homepageService.handleGetStartedButton();
+        response = {"text" : "hello"}
+        // response = homepageService.handleGetStartedButton();
         console.log("this is bat dau -------------------------------------------------");
         console.log(response);
     } else if (payload === 'RESTART_CONVERSATION') {
@@ -145,7 +146,7 @@ let handlePostback = (sender_psid, received_postback) => {
 };
 
 // Sends response messages via the Send API
-let callSendAPI = (sender_psid, response) => {
+let callSendAPI = async (sender_psid, response) => {
     // Construct the message body
     let request_body = {
         "recipient": {
